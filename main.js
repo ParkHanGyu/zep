@@ -1,3 +1,4 @@
 App.onJoinPlayer.Add(function(player){
-    App.showCenterLabel("Hello sparta")
+    player.moveSpeed = 300;
+    player.sendUpdated()
 })
