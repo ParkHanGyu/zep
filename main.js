@@ -1,14 +1,7 @@
-// spartan이라는 변수를 자바스크립트 문법에 맞게 생성
+App.onSay.Add(function(player, text){
+    App.showCenterLabel(text);
+})
 
-let spartan = App.loadSpritesheet('spartan.png', 64, 96, {
-    left: [0, 1, 2, 3], // left 라는 이미 정해진 왼쪽 방향으로 걸을 때의 애니메이션 이름
-    up: [0], // 그 이름에 쓰일 전체 파일에서의 인덱스 넘버들
-    down: [0],
-    right: [0, 1, 2, 3],
-}, 8); // 1초에 8장으로 한다.
-
-
-// 플레이어가 입장할 때(listen), 바로 spartan 그림으로 교체줍니다(action)
 App.onJoinPlayer.Add(function(player){
 	
 		player.sprite = spartan; 
