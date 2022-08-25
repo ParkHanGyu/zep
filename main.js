@@ -1,10 +1,6 @@
-App.onSay.Add(function(player, text){
+let cloud = App.loadSpritesheet("cloud.png", 659, 400, [0], 6);
 
-	if(text == 'speed up'){
-		player.moveSpeed = 400;
-	}
-	if(text == 'speed down'){
-		player.moveSpeed = 30;
-	}
-	player.sendUpdated();
+App.onJoinplayer.Add(function(){
+
+	Map.putObject(5, 5, cloud);
 })
